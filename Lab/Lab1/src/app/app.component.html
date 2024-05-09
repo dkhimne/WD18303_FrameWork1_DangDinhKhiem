@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="profile-section">
+        <h4>Profile Student</h4>
+        <img class="profile-image img-thumbnail" src="assets/images/{{ student.anh }}">
+        <div class="profile-info">
+          <ul>
+            <li><span>Ho ten:</span>{{ student.hoten }}</li>
+            <li><span>Ngay sinh:</span>{{ student.ngaysinh }}</li>
+            <li><span>Gioi tinh:</span>{{ student.gioitinh }}</li>
+            <li><span>Diem Trung Binh:</span>{{ student.diemTB }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="inventor-list">
+        <h2>Inventory List</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Year</th>
+              <th>Passed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let inventor of inventors">
+              <td>{{ inventor.id }}</td>
+              <td>{{ inventor.first }}</td>
+              <td>{{ inventor.last }}</td>
+              <td>{{ inventor.year }}</td>
+              <td>{{ inventor.passed }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="inventor-list">
+        <h2>Products List</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Code</th>
+              <th>Availabel</th>
+              <th>Price</th>
+              <th>5 Star rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td><img [src]="product.imageUrl" alt="{{ product.productName }}" style="width: 60px;" height="60px" ></td>
+              <td>{{ product.productName }}</td>
+              <td>{{ product.productCode }}</td>
+              <td>{{ product.releaseDate }}</td>
+              <td>{{ product.price }}</td>
+              <td>{{ product.starRating }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
