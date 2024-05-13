@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <h2>{{age}}</h2>
+    <h3>{{country}}</h3>
+    <button class="btn btn-success mr-2" (click)="open()">Open</button>
+    <button class="btn btn-secondary" (click)="close()">Close</button>
+</div>
+
+<div *ngIf="isCheck" class="container">
+    <app-lab3></app-lab3>    
+</div>
+
+<ul *ngFor="let stu of arrStudent" class="container">
+    <li>{{stu.name}}</li>
+    <li>{{stu.age}}</li>
+</ul>
