@@ -1,0 +1,43 @@
+<dialog [name]="name"></dialog>
+<p #pRef></p>
+
+<div class="card">
+    <div class="card-header">
+        <h4>Product list</h4>
+    </div>
+    <div class="card-body">
+        <div class="row mb-2">
+        <label class="col-2">Filter:</label>
+        <input type="text" class="col-3" [(ngModel)]='listFilter'>
+        <div class="col-7"></div>
+        </div>
+        <div class="row mb-4">
+        <h2 class="col-12">Filter by: </h2>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Code</th>
+                    <th>Available</th>
+                    <th>Price </th>
+                    <th>5 Star Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td><img src={{product.imageUrl}} alt="{{ product.productName }}" style="width: 60px;"
+                            height="60px"></td>
+                    <td>{{ product.productName }}</td>
+                    <td>{{ product.productCode }}</td>
+                    <td>{{ product.releaseDate }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>
+                        <app-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></app-star>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
