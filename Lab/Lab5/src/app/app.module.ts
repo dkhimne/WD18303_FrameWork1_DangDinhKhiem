@@ -8,13 +8,21 @@ import { HeaderComponent } from './pages/header/header.component';
 import { LoginComponent } from './auth/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UnitComponent } from './pages/unit/unit.component';
+import { CreateComponent } from './pages/unit/create/create.component';
+import { EditComponent } from './pages/unit/edit/edit.component';
+import { DeleteComponent } from './pages/unit/delete/delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    UnitComponent,
+    CreateComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

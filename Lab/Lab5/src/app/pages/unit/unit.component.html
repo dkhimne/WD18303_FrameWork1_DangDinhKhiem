@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <button (click)="formAdd()" class="btn btn-info">Add</button>
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let post of listUnit">
+                        <td>{{post.id}}</td>
+                        <td>{{post.name}}</td>
+                        <td>{{post.address}}</td>
+                        <td>{{post.description}}</td>
+                        <td>
+                            <button (click)="deleteUnit(post.id)" class="btn btn-danger"> Delete </button>
+                            <button (click)="formEdit(post.id)" class="btn btn-warning"> Edit </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
