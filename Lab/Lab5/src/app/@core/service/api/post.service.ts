@@ -1,4 +1,5 @@
-import { HttpClient } from '@angular/common/http';
+import { AuthService } from './auth.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -17,10 +18,12 @@ export interface Iunit {
 
 export class PostService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient , private authService : AuthService) { }
 
   getAllUnit(): Observable<any>{
-    return this.http.get('https://knowledgehub.demopolyct.online/api/unit');
+    return this.http.get('https://knowledgehub.demopolyct.online/api/unit',{
+      headers : new HttpHeaders().set('x-access-token',this.authService.getToken())
+    });
   }
   
   postUnit(data: Iunit): Observable<any> {

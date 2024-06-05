@@ -1,6 +1,7 @@
 import { AuthService } from './../../@core/service/api/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   loginForm!:FormGroup;
 
   constructor(
-    private authService : AuthService,
+    private authService : AuthService, private router : Router
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +40,10 @@ export class LoginComponent implements OnInit {
   }
 
   protected handleLoginFailed() {} 
+
+  pro() {
+    this.router.navigate(['/unit']); 
+  }
 
 }
 
