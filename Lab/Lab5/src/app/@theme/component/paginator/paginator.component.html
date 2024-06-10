@@ -1,0 +1,15 @@
+<div class="custom-paginator pt-4 justify-content-center d-flex ">
+    <button type="button" class="btn btn-info mr-1" (click)="goFirstPage()" [disabled]="hasPreviousPage">
+        <i class="fa fa-angle-double-left"></i>
+    </button>
+    <button type="button" class="btn btn-info mr-1" (click)="goPreviousPage()" [disabled]="hasPreviousPage">
+        <i class="fa fa-angle-left"></i>
+    </button>
+    <p class="paginator-page mb-2 py-2">{{ current_page }}/{{ last_page }}</p>
+    <button type="button" class="btn btn-info ml-1 mr-1" (click)="goNextPage()" [disabled]="hasNextPage">
+        <i class="fa fa-angle-right"></i>
+    </button>
+    <button type="button" class="btn btn-info" (click)="goLastPage()" [disabled]="hasNextPage">
+        <i class="fa fa-angle-double-right"></i>
+    </button>
+</div>

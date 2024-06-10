@@ -25,6 +25,12 @@
                     </tr>
                 </tbody>
             </table>
+            <app-paginator
+                [current_page] = "currentPage"
+                [last_page] = "lastPage"
+                [apiUrl] = "apiUrl"
+                (dataList) = "getPage($event)">
+            </app-paginator>
         </div>
     </div>
 </div>

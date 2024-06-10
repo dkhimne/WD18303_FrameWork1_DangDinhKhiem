@@ -12,6 +12,7 @@ import { UnitComponent } from './pages/unit/unit.component';
 import { CreateComponent } from './pages/unit/create/create.component';
 import { EditComponent } from './pages/unit/edit/edit.component';
 import { DeleteComponent } from './pages/unit/delete/delete.component';
+import { PaginatorComponent } from './@theme/component/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DeleteComponent } from './pages/unit/delete/delete.component';
     UnitComponent,
     CreateComponent,
     EditComponent,
-    DeleteComponent
+    DeleteComponent,
+    PaginatorComponent
   ],
   imports: [
     BrowserModule,

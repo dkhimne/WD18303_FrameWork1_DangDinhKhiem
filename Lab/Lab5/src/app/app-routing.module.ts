@@ -22,7 +22,7 @@ const routes: Routes = [
   },
   {
     path:'unit',
-    canActivate:[AuthGuard],
+    // canActivate:[AuthGuard],
     component:UnitComponent
   },
   {
